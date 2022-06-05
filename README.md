@@ -102,6 +102,8 @@ The above architecture is composed of the following:
 
 ![Demo](demo/SmartAnalyticsAppDatabricks.gif)
 
+> NOTE: Use [mp4](https://github.com/mgorav/data-product-as-service/blob/main/SmartAnalyticsApp.mp4) demo for better visual experience
+
 ## Setup 
 
 1. Create or start an existing DBX SQL endpoint in the workspace
