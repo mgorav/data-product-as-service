@@ -71,7 +71,7 @@ The above architecture is composed of the following:
 
 - **_Data Product As Service_**
   
-  This demonstration using Deltalake/Databricks, as result, making data product **_as a service_**, is achieved using 
+  This demonstration uses Deltalake/Databricks extensively, as result, making data product **_as a service_**, is achieved using 
   Databricks SQL Endpoint. Wrapping Data Product As Service, helps in providing horizontal
   concerns like authentication (e.g. OAUTH/OKTA), authorization (e.g. Ranger)
   ![Data Product As Service](architecture/DataProductAsService.png)
