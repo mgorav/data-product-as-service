@@ -123,8 +123,9 @@ LOCATION "dbfs:/databricks-datasets/nyctaxi/tables/nyctaxi_yellow";
 ```
 
 3. Change`.env` file as per your configuration 
-4. On local machine, launch `make docker-run` to launch the server
-5. Open http://localhost:9999 and it's time to play :) 
+4. Substitute right values in .env file
+5. On local machine, launch `make docker-run` to launch the server
+6. Open http://localhost:9999 and it's time to play :) 
 
 > **_NOTE_** Following micro-frontend integraiton techniques can be used:
 > 
