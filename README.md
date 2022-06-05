@@ -126,6 +126,31 @@ LOCATION "dbfs:/databricks-datasets/nyctaxi/tables/nyctaxi_yellow";
 4. On local machine, launch `make docker-run` to launch the server
 5. Open http://localhost:9999 and it's time to play :) 
 
+> **_NOTE_** Following micro-frontend integraiton techniques can be used:
+> 
+> Routing
+> 
+> iFrame
+> 
+> Micro-apps
+> 
+> Pure components
+> 
+> Web components
+
+
+> **_NOTE:_** Micro-frontend architecture worth looking:
+> 
+> Bit
+> 
+> Module Federation
+> 
+> Single SPA
+> 
+> SystemJS
+> 
+> Piral
+
 ## References
 
 - [Databricks SQL](https://databricks.com/product/databricks-sql)
