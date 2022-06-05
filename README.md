@@ -116,7 +116,6 @@ The above architecture is composed of the following:
 2. Create a query and define the database and table (Data Product):
 
 ```sql
-CREATE DATABASE IF NOT EXISTS streamlit_demo_db;
 CREATE TABLE IF NOT EXISTS default.nyctaxi_yellow 
 USING DELTA
 LOCATION "dbfs:/databricks-datasets/nyctaxi/tables/nyctaxi_yellow";
