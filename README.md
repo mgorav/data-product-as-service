@@ -4,7 +4,7 @@ Every body talks about Data engineering is software problem. That's ture. In the
 built using APIs first approach, that is, micro-services  based architecture combined with micro-front end architecture.
 Micro-frontends are intended to bring the same benefits of microservices to the UI layer. By breaking up a complex 
 system into smaller, more manageable pieces, teams can rapidly develop and release new features and functionality with
-agility & end to end automation - software excellence. This style of application development is referred to 
+agility & end to end automation - software excellence. This style of application development is referred to as
 [12-factor-app](https://12factor.net)
 
 Micro-frontends architecture really shine in project with many of developers working together in a large business domain 
@@ -14,8 +14,8 @@ the applications without creating communication and coordination overhead across
 > _micro-service + micro-frontend = agility & end to automation = simplicity_
 
 
-The analytics is all about finding answers to q question using data, also called data product with interactive 
-visualization. Multiple team make data product and visualization team using this product provides visualization, to 
+The analytics is all about finding answers to a question using data, also called **_data product with interactive 
+visualization_**. Multiple team make data product and visualization team using this product provides visualization, to 
 provide insight into the business.
 
 Visualization became is at the heart of data analysis. The engineers of data visualization applications are choosing 
