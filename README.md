@@ -1,8 +1,11 @@
 # Smart Analytics
 
 Every body talks about Data engineering is software problem. That's ture. In the world of software, application are 
-build using APIs first approach, that is, micro-services  based architecture combined with micro-front end architecture.
-Micro-frontends are intended to bring the same benefits of microservices to the UI layer. By breaking up a complex system into smaller, more manageable pieces, teams can rapidly develop and release new features and functionality.
+built using APIs first approach, that is, micro-services  based architecture combined with micro-front end architecture.
+Micro-frontends are intended to bring the same benefits of microservices to the UI layer. By breaking up a complex 
+system into smaller, more manageable pieces, teams can rapidly develop and release new features and functionality with
+agility & end to end automation - software excellence. This style of application development is referred to 
+[12-factor-app](https://12factor.net)
 
 Micro-frontends architecture really shine in project with many of developers working together in a large business domain 
 and with a goal to reduce the complexity by dividing into multiple subdomains, independently deploy different parts of 
