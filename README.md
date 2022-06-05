@@ -15,10 +15,10 @@ the applications without creating communication and coordination overhead across
 
 
 The analytics is all about finding answers to a question using data, also called **_data product with interactive 
-visualization_**. Multiple team make data product and visualization team using this product provides visualization, to 
-provide insight into the business.
+visualization_**. Multiple team make data product and visualization teams using this data product provides visualization.
+This visualization provides insight into the business.
 
-Visualization became is at the heart of data analysis. The engineers of data visualization applications are choosing 
+Visualization is at the heart of data analysis. The engineers of data visualization applications are choosing 
 between two options:
 
 - No-code BI visualization tools, with a drag-n-drop interface and some possible extensions for customization
