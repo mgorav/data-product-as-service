@@ -43,7 +43,7 @@ This blog demonstrates, Data Product As Service using Databricks SQL endpoint an
 Streamlit
 
 
-Sections
+Topics/Agenda
 =================
 
  * [Architecture](#Architecture)
@@ -150,6 +150,13 @@ LOCATION "dbfs:/databricks-datasets/nyctaxi/tables/nyctaxi_yellow";
 > SystemJS
 > 
 > Piral
+
+
+## Summarization
+
+I feel at the end my research journey, I can confidently says, **_"yes indeed, data engineering is a software problem"_**. All design 
+principles of software applies to data. Such architecture styles by providing software excellence, aides in automation & 
+simplicity. I wonder which company can say NO. It's time we say goodbye to 90s and say hello to 2020 :-)
 
 ## References
 
