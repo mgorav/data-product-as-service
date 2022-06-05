@@ -34,7 +34,7 @@ How can we make analytics development simpler, automated and thereby empowering 
 
 > Hold on: Isn't it micro-services + micro-front architecture provide this.
 
-The question arises, how can we convert data product as a service, so that micro-frontends cane be build. These 
+The question arises, how can we convert data product as a service, so that micro-frontends can be build. These 
 micro-front can be:
 - traditional, eg tableau, powerBI
 - modern UI, eg reactJS, Streamlit 
