@@ -6,9 +6,9 @@ import datetime as dt
 import plotly.express as px
 import plotly.graph_objects as go
 from databricks_streamlit_demo.helper import (
-    write_aligned_header,
-    custom_spinner,
-    empty_date_warning,
+    write_to_aligned_header,
+    to_custom_spinner,
+    clear_date_warning,
 )
 
 class UIAnalytics:
@@ -17,7 +17,7 @@ class UIAnalytics:
         px.set_mapbox_access_token(self.provider.get_mapbox_token())
 
     def add_counter_plot(self, chosen_date: dt.date) -> None:
-        with custom_spinner("Loading total count ..."):
+        with to_custom_spinner("Loading total count ..."):
             cnt = self.provider._get_data(
                 f"""
             select count(1) as cnt 
@@ -37,8 +37,8 @@ class UIAnalytics:
             st.plotly_chart(fig, use_container_width=True)
 
     def add_minute_plot(self, chosen_date: dt.date) -> None:
-        write_aligned_header("Number of trips per minute", alignment="right")
-        with custom_spinner("Loading minute plot ..."):
+        write_to_aligned_header("Number of trips per minute", alignment="right")
+        with to_custom_spinner("Loading minute plot ..."):
             data = self.provider.get_trips_by_minute(chosen_date)
             fig = px.area(
                 data,
@@ -85,9 +85,9 @@ class UIAnalytics:
         alignment: Optional[str] = None,
         zoom: Optional[int] = 10,
     ) -> None:
-        write_aligned_header(f"{name.capitalize()} density map", alignment=alignment)
+        write_to_aligned_header(f"{name.capitalize()} density map", alignment=alignment)
 
-        with custom_spinner(f"Loading {name} density map ..."):
+        with to_custom_spinner(f"Loading {name} density map ..."):
             fig = self._get_density_map(
                 chosen_date,
                 f"{name}_datetime",
@@ -99,4 +99,4 @@ class UIAnalytics:
             if fig:
                 st.plotly_chart(fig, use_container_width=True)
             else:
-                empty_date_warning()
+                clear_date_warning()
