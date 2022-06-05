@@ -21,7 +21,7 @@ This visualization provides insight into the business.
 Visualization is at the heart of data analysis. The engineers of data visualization applications are choosing 
 between two options:
 
-- No-code BI visualization tools, with a drag-n-drop interface and some possible extensions for customization
+- No-code BI visualization tools, with a drag-n-drop interface and some possible extensions for customization, e.g. Tableau
 - Web frameworks with rich visualization capabilities in high-level programming languages, such as JS, Python etc
 
 We are living in the world of interactive visualization, with the rise of framework like Dash and Streamlit, building 
