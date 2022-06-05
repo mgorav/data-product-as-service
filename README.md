@@ -102,7 +102,7 @@ The above architecture is composed of the following:
 - Free Mapbox token  - accessible token [here](https://www.mapbox.com/)
 - Locally: Docker, Makefile
 - Since this application uses [DockerFile](https://raw.githubusercontent.com/mgorav/data-product-as-service/main/Dockerfile),
-  this application can be deployed as serverless containerization tech like Fargate or [OAM](https://oam.dev)
+  this application can be deployed as serverless containerization tech like Fargate or [OAM](https://oam.dev) like [DAPR](https://dapr.io/)
 
 ## Demo
 
