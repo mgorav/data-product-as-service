@@ -127,6 +127,7 @@ LOCATION "dbfs:/databricks-datasets/nyctaxi/tables/nyctaxi_yellow";
 5. On local machine, launch `make docker-run` to launch the server
 6. Open http://localhost:9999 and it's time to play :) 
 7. For DAPR
+> Install DAPR locally or on k8s
 ````
 dapr run --app-id smartapp --app-port 9999 --dapr-http-port 9999 python app.py
 ````
