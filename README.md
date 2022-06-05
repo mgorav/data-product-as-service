@@ -73,7 +73,7 @@ The above architecture is composed of the following:
   
   This demonstration uses Deltalake/Databricks extensively, as a result, making data product **_as a service_**, is achieved using 
   Databricks SQL Endpoint. Wrapping Data Product As Service, helps in providing horizontal
-  concerns like authentication (e.g. OAUTH/OKTA), authorization (e.g. [Ranger](https://github.com/mgorav/ranger-policies)) )
+  concerns like authentication (e.g. OAUTH/OKTA), authorization (e.g. [Ranger](https://github.com/mgorav/ranger-policies)) 
   ![Data Product As Service](architecture/DataProductAsService.png)
   Databricks provide ability to access data product using SQL endpoint, agnostic of the underlying protocol, as shown 
   in the configuration below:
