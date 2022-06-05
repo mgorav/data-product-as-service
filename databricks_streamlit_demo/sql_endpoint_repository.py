@@ -19,7 +19,7 @@ class SQLEndpointInfo:
 
 class SQLEndpointRepository:
     """
-    Base class for providing access to the data 
+    Base class for to data product
     """
     def __init__(self, logger: Logger) -> None:
         self.logger = logger
@@ -32,7 +32,7 @@ class SQLEndpointRepository:
     @staticmethod
     def _get_endpoint_info() -> SQLEndpointInfo:
         """
-        This function collects all the necessary bits of information to connect to the endpoint
+        This functions collects vital parameters required to build SQL Endpoint
         """
         for var in ["DATABRICKS_HOST", "DATABRICKS_TOKEN", "DATABRICKS_HTTP_PATH"]:
             if var not in os.environ:
@@ -55,19 +55,19 @@ class SQLEndpointRepository:
     @staticmethod
     def get_mapbox_token() -> str:
         """
-        For chosen visualization map type, a free token from Mapbox is needed.
+        Getting access to MAPBOX via token
         """
         token = os.environ.get("MAPBOX_TOKEN")
         if not token:
             raise Exception(
-                "Mapbox token is not provided, please create one for free at https://studio.mapbox.com/"
+                "Mapbox token missing, please create one for free at https://studio.mapbox.com/"
             )
         return token
 
     @staticmethod
     def get_connection_string(endpoint_info: SQLEndpointInfo) -> str:
         """
-        This function builds the connection string as per Simba ODBC driver documentation
+        Bind connection parameters
         """
         connection_string = "".join(
             [
