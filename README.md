@@ -117,7 +117,7 @@ The above architecture is composed of the following:
 
 ```sql
 CREATE DATABASE IF NOT EXISTS streamlit_demo_db;
-CREATE TABLE IF NOT EXISTS streamlit_demo_db.nyctaxi_yellow 
+CREATE TABLE IF NOT EXISTS default.nyctaxi_yellow 
 USING DELTA
 LOCATION "dbfs:/databricks-datasets/nyctaxi/tables/nyctaxi_yellow";
 ```
