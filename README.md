@@ -27,6 +27,7 @@ between two options:
 We are living in the world of interactive visualization, with the rise of framework like Dash and Streamlit, building 
 visualization using Python (very popular with data teams), is becoming very attractive option.
 
+
 > So analytics world is on the same cross-roads as application team were.
 
 How can we make analytics development simpler, automated and thereby empowering the engineering teams.
