@@ -25,7 +25,7 @@ between two options:
 - Web frameworks with rich visualization capabilities in high-level programming languages, such as JS, Python etc
 
 We are living in the world of interactive visualization, with the rise of framework like Dash and Streamlit, building 
-visualization using Python (very popular with data teams), is becoming very attractive option.
+visualization using Python (programing language of choice for the data teams), is becoming very attractive option.
 
 
 > So analytics world is on the same cross-roads as application team were.
