@@ -100,7 +100,7 @@ The above architecture is composed of the following:
 
 ## Demo
 
-![demo](demo/SmartAnalyticsApp.gif)
+![Demo](demo/SmartAnalyticsAppDatabricks.gif)
 
 ## Setup 
 
