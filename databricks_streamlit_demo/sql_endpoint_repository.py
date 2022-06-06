@@ -23,14 +23,14 @@ class SQLEndpointRepository:
     """
     def __init__(self, logger: Logger) -> None:
         self.logger = logger
-        endpoint_info = self._get_endpoint_info()
+        endpoint_info = self.do_get_endpoint_info()
         self.connection = pyodbc.connect(
-            self.get_connection_string(endpoint_info), autocommit=True
+            self.do_get_connection_string(endpoint_info), autocommit=True
         )
         print('self.connection=' + 'good')
 
     @staticmethod
-    def _get_endpoint_info() -> SQLEndpointInfo:
+    def do_get_endpoint_info() -> SQLEndpointInfo:
         """
         This functions collects vital parameters required to build SQL Endpoint
         """
@@ -53,7 +53,7 @@ class SQLEndpointRepository:
         return SQLEndpointInfo(_host, _token, _http_path, _driver_path)
 
     @staticmethod
-    def get_mapbox_token() -> str:
+    def do_get_mapbox_token() -> str:
         """
         Getting access to MAPBOX via token
         """
@@ -65,7 +65,7 @@ class SQLEndpointRepository:
         return token
 
     @staticmethod
-    def get_connection_string(endpoint_info: SQLEndpointInfo) -> str:
+    def do_get_connection_string(endpoint_info: SQLEndpointInfo) -> str:
         """
         Bind connection parameters
         """
@@ -87,7 +87,7 @@ class SQLEndpointRepository:
         )
         return connection_string
 
-    def _get_data(self, query: str) -> pd.DataFrame:
+    def do_get_data(self, query: str) -> pd.DataFrame:
         self.logger.debug(f"Running SQL query: {query}")
         start_time = dt.datetime.now()
         data = pd.read_sql(query, self.connection)
@@ -110,7 +110,7 @@ class TaxiSQLEndpointRepository(SQLEndpointRepository):
         group by 1
         order by 1
         """
-        data = self._get_data(query)
+        data = self.do_get_data(query)
         return data
 
     def get_raw_trips(self, date_filter_column: str, dt: dt.date) -> pd.DataFrame:
@@ -132,7 +132,7 @@ class TaxiSQLEndpointRepository(SQLEndpointRepository):
             and dropoff_longitude is not null
             and dropoff_latitude is not null
         """
-        data = self._get_data(query)
+        data = self.do_get_data(query)
 
         data["pickup_hour"] = pd.to_datetime(data["pickup_hour"]).dt.strftime("%H")
         data["dropoff_hour"] = pd.to_datetime(data["dropoff_hour"]).dt.strftime("%H")

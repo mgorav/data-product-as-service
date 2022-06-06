@@ -14,11 +14,11 @@ from databricks_streamlit_demo.helper import (
 class UIAnalytics:
     def __init__(self, provider: TaxiSQLEndpointRepository) -> None:
         self.provider = provider
-        px.set_mapbox_access_token(self.provider.get_mapbox_token())
+        px.set_mapbox_access_token(self.provider.do_get_mapbox_token())
 
     def add_counter_plot(self, chosen_date: dt.date) -> None:
         with to_custom_spinner("Loading total count ..."):
-            cnt = self.provider._get_data(
+            cnt = self.provider.do_get_data(
                 f"""
             select count(1) as cnt 
             from default.nyctaxi_yellow
