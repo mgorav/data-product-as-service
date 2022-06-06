@@ -25,9 +25,9 @@ WORKDIR /usr/src/app
 
 
 
-ADD environment.yml environment.yml
-RUN conda env create create -f environment.yml
-#RUN --mount=type=cache,target=/opt/conda/pkgs conda env create -f environment.yml
+ADD app_environment.yml app_environment.yml
+RUN conda env create create -f app_environment.yml
+#RUN --mount=type=cache,target=/opt/conda/pkgs conda env create -f app_environment.yml
 ENV PATH /opt/conda/envs/databricks-streamlit-demo/bin:$PATH
 RUN /bin/bash -c "source activate databricks-streamlit-demo"
 
