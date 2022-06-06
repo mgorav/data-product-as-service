@@ -218,5 +218,5 @@ Checkout my blog, which demonstrates such concepts using Databricks SQL Endpoint
 
 Architects/Engineers, software/data professionals, POs etc - Be the change you want to see in the world of advance analytics. (inspiration from Mahatma Gandhi famous quote ) 
 
-PS: This example is adapted from DBX sample
+PS: This example is adapted from DBX
 
