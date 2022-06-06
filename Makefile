@@ -10,7 +10,7 @@ docker-run: docker-build
 debug-in-docker:
 	pip install -e .
 	PYTHONPATH=/workspaces/data_product_service
-	streamlit run data_product_service/app.py \
+	streamlit run data_product_service/main.py \
 		--server.port=8052 \
 		--logger.level=debug \
 		--logger.messageFormat="[%(asctime)s][%(levelname)s][%(name)s][%(funcName)s][%(message)s]"

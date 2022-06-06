@@ -128,7 +128,7 @@ LOCATION "dbfs:/databricks-datasets/nyctaxi/tables/nyctaxi_yellow";
 7. For DAPR
 > Install DAPR locally or on k8s/EKS
 ````
-dapr run --app-id smartapp --app-port 9999 --dapr-http-port 9999 python app.py
+dapr run --app-id smartapp --app-port 9999 --dapr-http-port 9999 python main.py
 ````
 
 > **_NOTE_** Following micro-frontend integraiton techniques can be used:

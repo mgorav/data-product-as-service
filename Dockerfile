@@ -38,4 +38,4 @@ RUN pip install -e .
 
 ENV STREAMLIT_SERVER_PORT=9999
 
-ENTRYPOINT ["streamlit", "run", "data_product_service/app.py","--logger.level=debug", "--server.address", "0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "data_product_service/main.py","--logger.level=debug", "--server.address", "0.0.0.0"]
