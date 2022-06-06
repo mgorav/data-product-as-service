@@ -6,8 +6,8 @@ import datetime as dt
 import plotly.express as px
 import plotly.graph_objects as go
 from databricks_streamlit_demo.helper import (
-    write_to_aligned_header,
-    to_custom_spinner,
+    do_write_to_aligned_header,
+    make_custom_spinner,
     clear_date_warning,
 )
 
@@ -17,7 +17,7 @@ class UIAnalytics:
         px.set_mapbox_access_token(self.provider.do_get_mapbox_token())
 
     def add_counter_plot(self, chosen_date: dt.date) -> None:
-        with to_custom_spinner("Loading total count ..."):
+        with make_custom_spinner("Loading total count ..."):
             cnt = self.provider.do_get_data(
                 f"""
             select count(1) as cnt 
@@ -37,9 +37,9 @@ class UIAnalytics:
             st.plotly_chart(fig, use_container_width=True)
 
     def add_minute_plot(self, chosen_date: dt.date) -> None:
-        write_to_aligned_header("Number of trips per minute", alignment="right")
-        with to_custom_spinner("Loading minute plot ..."):
-            data = self.provider.get_trips_by_minute(chosen_date)
+        do_write_to_aligned_header("Number of trips per minute", alignment="right")
+        with make_custom_spinner("Loading minute plot ..."):
+            data = self.provider.do_get_trips_by_minute(chosen_date)
             fig = px.area(
                 data,
                 x="dt",
@@ -58,7 +58,7 @@ class UIAnalytics:
         frame_col: str,
         zoom: int = 10,
     ) -> Optional[FigureWidget]:
-        data = self.provider.get_raw_trips(date_filter_column, chosen_date)
+        data = self.provider.do_get_raw_trips(date_filter_column, chosen_date)
         if data.empty:
             return None
         else:
@@ -85,9 +85,9 @@ class UIAnalytics:
         alignment: Optional[str] = None,
         zoom: Optional[int] = 10,
     ) -> None:
-        write_to_aligned_header(f"{name.capitalize()} density map", alignment=alignment)
+        do_write_to_aligned_header(f"{name.capitalize()} density map", alignment=alignment)
 
-        with to_custom_spinner(f"Loading {name} density map ..."):
+        with make_custom_spinner(f"Loading {name} density map ..."):
             fig = self._get_density_map(
                 chosen_date,
                 f"{name}_datetime",

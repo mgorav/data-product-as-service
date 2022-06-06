@@ -4,9 +4,9 @@ import threading as _threading
 from streamlit.report_thread import add_report_ctx as _add_report_ctx
 
 
-def write_to_aligned_header(text: str, alignment: str = "left", level: int = 3):
+def do_write_to_aligned_header(text: str, alignment: str = "left", level: int = 3):
     """
-    Writes header with provided alignment and level, useful for doing left/right switches
+    Writes HTML header with provided alignment and level, useful for doing left/right switches
     """
     st.markdown(
         f"""
@@ -26,7 +26,7 @@ Pickup/dropoff locations are missing in the source data for any day after 2016.0
     )
 
 
-def to_spinner_component(text: str) -> str:
+def make_spinner_component(text: str) -> str:
     """
     Returns HTML code for custom spinner with spinner component from Bootstrap 4
     """
@@ -47,7 +47,7 @@ def to_spinner_component(text: str) -> str:
 
 
 @_contextlib.contextmanager
-def to_custom_spinner(text="In progress..."):
+def make_custom_spinner(text="In progress..."):
     """
     This function is a fork of st.spinner
     """
@@ -68,7 +68,7 @@ def to_custom_spinner(text="In progress..."):
                     with caching.suppress_cached_st_function_warning():
                         # keep the spinner component on the screen until context is finished
                         message.markdown(
-                            to_spinner_component(text), unsafe_allow_html=True
+                            make_spinner_component(text), unsafe_allow_html=True
                         )
 
         _add_report_ctx(_threading.Timer(DELAY_SECS, set_message)).start()

@@ -60,7 +60,7 @@ class SQLEndpointRepository:
         token = os.environ.get("MAPBOX_TOKEN")
         if not token:
             raise Exception(
-                "Mapbox token missing, please create one for free at https://studio.mapbox.com/"
+                "Mapbox token missing, please create using URL: https://studio.mapbox.com/"
             )
         return token
 
@@ -82,7 +82,7 @@ class SQLEndpointRepository:
                 ";SparkServerType=3",
                 ";UID=token",
                 f";PWD={endpoint_info.token}",
-                ";RowsFetchedPerBlock=100000", # Please note that the default value is 10k, we increase it to 100k for faster fetches
+                ";RowsFetchedPerBlock=100000",
             ]
         )
         return connection_string
@@ -100,7 +100,7 @@ class SQLEndpointRepository:
 
 
 class TaxiSQLEndpointRepository(SQLEndpointRepository):
-    def get_trips_by_minute(self, dt: dt.date) -> pd.DataFrame:
+    def do_get_trips_by_minute(self, dt: dt.date) -> pd.DataFrame:
         query = f"""
         select 
             date_trunc('minute', pickup_datetime) as dt, 
@@ -113,7 +113,7 @@ class TaxiSQLEndpointRepository(SQLEndpointRepository):
         data = self.do_get_data(query)
         return data
 
-    def get_raw_trips(self, date_filter_column: str, dt: dt.date) -> pd.DataFrame:
+    def do_get_raw_trips(self, date_filter_column: str, dt: dt.date) -> pd.DataFrame:
         query = f"""
         select 
             {date_filter_column},

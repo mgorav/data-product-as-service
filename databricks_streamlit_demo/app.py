@@ -6,7 +6,7 @@ import logging
 import datetime as dt
 from databricks_streamlit_demo.sql_endpoint_repository import TaxiSQLEndpointRepository
 from databricks_streamlit_demo.ui_analytics import UIAnalytics
-from databricks_streamlit_demo.helper import write_to_aligned_header, clear_date_warning
+from databricks_streamlit_demo.helper import do_write_to_aligned_header, clear_date_warning
 
 
 logger = logging.getLogger("databricks-streamlit-demo")
@@ -30,7 +30,7 @@ clear_date_warning()
 handle_filter_box, handle_minute_dynamic_box = st.beta_columns([1, 4])
 
 with handle_filter_box:
-    write_to_aligned_header("Please choose the date")
+    do_write_to_aligned_header("Please choose the date")
     chosen_date = st.date_input("", dt.date(2016, 6, 30))
     plotter.add_counter_plot(chosen_date)
 
@@ -42,7 +42,7 @@ handle_pickups_map, handle_dropoffs_map = st.beta_columns(2)
 
 
 with handle_pickups_map:
-    plotter.add_density_map(chosen_date, name="pickup", zoom=11)
+    plotter.add_density_map(chosen_date, name="pickup", zoom=12)
 
 with handle_dropoffs_map:
-    plotter.add_density_map(chosen_date, name="dropoff", zoom=9, alignment="right")
+    plotter.add_density_map(chosen_date, name="dropoff", zoom=10, alignment="right")
