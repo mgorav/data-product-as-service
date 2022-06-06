@@ -167,4 +167,56 @@ Finally, using aforementioned architecture, it's possible to mix and match diffe
 
 ![Arch](architecture/flexibility.png)
 
+
+## Linkedin 
+
+> How to move from "Report building department" to "Smart Analytics application (browser based) building department"?
+
+Everybody/analysts talks about data handling as software problem. The question arises, if it's a software problem, how can, we:
+- implement APIs/Service first approach (protocol agnostic data product access)
+- implement micro-services architecture
+- utilize micro-frontend/modular UI
+- implement serverless/containerization - fuel for automation
+- use OAM (Open Application Model Specification) like DAPR (Distributed Application Runtime)
+- have unified batch and stream programming model (simplification)
+- access SQL as endpoint fueled by power of cloud
+- be agnostic of power behind SQL execution (Apache Spark)
+- secure and authorized data access (privacy@core)
+- etc
+
+These are over the years, battle/production hardened software development practices and not buzz words. I call for breaking this bridge - application vs analytics and stop burning companies money (double investment)
+
+Data in itself has no value, adding a smart analytics help in providing “data story telling”. Aforementioned style of architecture not only help in agility, but also provides scale with automation & simplicity. This architecture style is an ace, and can be combined with traditional analytics tools like Tableau, Oracle analytics etc, as well as modern analytics style using Redash, Streamlit etc
+
+There are many usecases, some from retail industry:
+- sales
+- logistics
+- inventory
+-….
+
+From health insurance, following usecases pops out:
+- policies
+- claim admin
+- product definition with sample claim processing
+- ….
+
+From payment industry, following usecases comes to mind:
+- retailer
+- payments tracking
+- payment products
+- multi-channel payment activity
+- merchant
+-….
+
+90’s era was all about analytics in a box (monolithic). It's time, we say goodbye to 90s analytics style and say hello to 2022 analytics style :-)
+
+This style brings same old power of SQL in your hand and augment it with the power of cloud, accessible as a service - termed cloud native analytics.
+
+The key to building such "Smart Analytics aka Cloud Native Analytics" (breaking the bridge) lies in making "Data Product As Service". A service, which is agnostic of underlying protocol.
+
+Checkout my blog, which demonstrates such concepts using Databricks SQL Endpoint and real-time geo location tracking, just like Ubers of the world. This in my humble opinion - data at finger tip or just a service call away.
+
+Architects/Engineers, software/data professionals, POs etc - Be the change you want to see in the world of advance analytics. (inspiration from Mahatma Gandhi famous quote ) 
+
 PS: This example is adapted from DBX sample
+
