@@ -162,7 +162,7 @@ dapr run --app-id smartapp --app-port 9999 --dapr-http-port 9999 python app.py
 I feel at the end of my research journey, I can confidently says, **_"yes indeed, data engineering is a software problem"_**. All design 
 principles of software applies to data. Such architecture styles by providing software excellence, aides in automation & 
 simplicity. I wonder which company can say NO. It's time we say goodbye to 90s analytics style and say hello to 2022 analytics style :-)
-
+PS: This example is adapted from DBX sample
 ## References
 
 - [Databricks SQL](https://databricks.com/product/databricks-sql)
