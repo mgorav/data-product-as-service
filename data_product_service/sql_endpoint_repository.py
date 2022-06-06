@@ -34,23 +34,23 @@ class SQLEndpointRepository:
         """
         This functions collects vital parameters required to build SQL Endpoint
         """
-        for var in ["DATABRICKS_HOST", "DATABRICKS_TOKEN", "DATABRICKS_HTTP_PATH"]:
+        for var in ["DBX_HOST", "DBX_TOKEN", "DBX_HTTP_PATH"]:
             if var not in os.environ:
                 raise Exception(f"Environment variable {var} is not defined")
 
-        _host = os.environ["DATABRICKS_HOST"]
-        _token = os.environ["DATABRICKS_TOKEN"]
-        _http_path = os.environ["DATABRICKS_HTTP_PATH"]
-        _driver_path = os.environ.get(
+        host = os.environ["DBX_HOST"]
+        token = os.environ["DBX_TOKEN"]
+        http_path = os.environ["DBX_HTTP_PATH"]
+        driver_path = os.environ.get(
             "SIMBA_DRIVER_PATH", "/opt/simba/spark/lib/64/libsparkodbc_sb64.so"
         )  # default location on Debian
 
-        print('_host=' + _host)
-        print('_token=' + _token)
-        print('_http_path=' + _http_path)
-        print('_driver_path=' + _driver_path)
+        print('host=' + host)
+        print('token=' + token)
+        print('http_path=' + http_path)
+        print('driver_path=' + driver_path)
 
-        return SQLEndpointInfo(_host, _token, _http_path, _driver_path)
+        return SQLEndpointInfo(host, token, http_path, driver_path)
 
     @staticmethod
     def do_get_mapbox_token() -> str:
@@ -60,7 +60,7 @@ class SQLEndpointRepository:
         token = os.environ.get("MAPBOX_TOKEN")
         if not token:
             raise Exception(
-                "Mapbox token missing, please create using URL: https://studio.mapbox.com/"
+                "Mapbox token missing, please create using URL:x https://studio.mapbox.com/"
             )
         return token
 
