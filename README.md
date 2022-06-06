@@ -192,7 +192,7 @@ There are many usecases, some from retail industry:
 - sales
 - logistics
 - inventory
--….
+- .....
 
 From health insurance, following usecases pops out:
 - policies
