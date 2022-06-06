@@ -168,7 +168,7 @@ Finally, using aforementioned architecture, it's possible to mix and match diffe
 ![Arch](architecture/flexibility.png)
 
 
-## Linkedin 
+## Linkedin blog
 
 > How to move from "Report building department" to "Smart Analytics application (browser based) building department"?
 
