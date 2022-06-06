@@ -39,7 +39,7 @@ micro-front can be:
 - traditional, eg tableau, powerBI
 - modern UI, eg reactJS, Streamlit 
 
-This blog demonstrates, Data Product As Service using Databricks SQL endpoint and analytics visualization using 
+This blog demonstrates, Data Product As Service using Databricks [SQL endpoint](https://databricks.com/product/databricks-sql) and analytics visualization using 
 Streamlit
 
 
@@ -50,9 +50,7 @@ Topics/Agenda
  * [Prerequisites](#Prerequisites)
  * [Demo](#Demo)
  * [Setup](#Setup)
- * [References](#References)
-
-
+ 
 ## Architecture
 
 Following picture shows the reference architecture for building analytics using micro-services + micro-frontend 
@@ -97,12 +95,14 @@ The above architecture is composed of the following:
 
 ## Prerequisites
 
-- Databricks SQL endpoint
+- [Databricks SQL endpoint](https://databricks.com/product/databricks-sql)
   The demo using New York yellow taxi data
-- Free Mapbox token  - accessible token [here](https://www.mapbox.com/)
+- Free [Mapbox](https://www.mapbox.com/) token  - accessible token [here](https://www.mapbox.com/)
 - Locally: Docker, Makefile
+- [New York taxi dataset](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 - Since this application uses [DockerFile](https://raw.githubusercontent.com/mgorav/data-product-as-service/main/Dockerfile),
   this application can be deployed as serverless containerization tech like Fargate or [OAM](https://oam.dev) like [DAPR](https://dapr.io/)
+- [Streamlit](https://streamlit.io/)
 
 ## Demo
 
@@ -162,11 +162,5 @@ dapr run --app-id smartapp --app-port 9999 --dapr-http-port 9999 python app.py
 I feel at the end of my research journey, I can confidently says, **_"yes indeed, data engineering is a software problem"_**. All design 
 principles of software applies to data. Such architecture styles by providing software excellence, aides in automation & 
 simplicity. I wonder which company can say NO. It's time we say goodbye to 90s analytics style and say hello to 2022 analytics style :-)
-PS: This example is adapted from DBX sample
-## References
 
-- [Databricks SQL](https://databricks.com/product/databricks-sql)
-- [Streamlit](https://streamlit.io/)
-- [Mapbox](https://www.mapbox.com/)
-- [NYC Taxi Dataset](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
-- [Markdown TOC](https://github.com/ekalinin/github-markdown-toc)
+PS: This example is adapted from DBX sample
