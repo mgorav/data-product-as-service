@@ -1,8 +1,8 @@
 from setuptools import find_packages, setup
-from databricks_streamlit_demo import __version__
+from data_product_service import __version__
 
 setup(
-    name="databricks_streamlit_demo",
+    name="data_product_service",
     packages=find_packages(exclude=["tests", "tests.*"]),
     setup_requires=["wheel"],
     version=__version__,

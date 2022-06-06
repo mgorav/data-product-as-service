@@ -1,4 +1,4 @@
-name: databricks-streamlit-demo
+name: data_product_service
 channels:
   - conda-forge
 dependencies:

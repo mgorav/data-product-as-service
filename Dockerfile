@@ -28,14 +28,14 @@ WORKDIR /usr/src/app
 ADD app_environment.yml app_environment.yml
 RUN conda env create create -f app_environment.yml
 
-ENV PATH /opt/conda/envs/databricks-streamlit-demo/bin:$PATH
-RUN /bin/bash -c "source activate databricks-streamlit-demo"
+ENV PATH /opt/conda/envs/data_product_service/bin:$PATH
+RUN /bin/bash -c "source activate data_product_service"
 
-ADD databricks_streamlit_demo databricks_streamlit_demo
+ADD data_product_service data_product_service
 ADD setup.py setup.py
 
 RUN pip install -e .
 
 ENV STREAMLIT_SERVER_PORT=9999
 
-ENTRYPOINT ["streamlit", "run", "databricks_streamlit_demo/app.py","--logger.level=debug", "--server.address", "0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "data_product_service/app.py","--logger.level=debug", "--server.address", "0.0.0.0"]

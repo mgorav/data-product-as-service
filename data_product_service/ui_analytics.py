@@ -1,11 +1,11 @@
 from typing import Optional
 from plotly.missing_ipywidgets import FigureWidget
-from databricks_streamlit_demo.sql_endpoint_repository import TaxiSQLEndpointRepository
+from data_product_service.sql_endpoint_repository import TaxiSQLEndpointRepository
 import streamlit as st
 import datetime as dt
 import plotly.express as px
 import plotly.graph_objects as go
-from databricks_streamlit_demo.helper import (
+from data_product_service.helper import (
     do_write_to_aligned_header,
     make_custom_spinner,
     clear_date_warning,

@@ -4,12 +4,12 @@ Application entrypoint for streamlit.
 import streamlit as st
 import logging
 import datetime as dt
-from databricks_streamlit_demo.sql_endpoint_repository import TaxiSQLEndpointRepository
-from databricks_streamlit_demo.ui_analytics import UIAnalytics
-from databricks_streamlit_demo.helper import do_write_to_aligned_header, clear_date_warning
+from data_product_service.sql_endpoint_repository import TaxiSQLEndpointRepository
+from data_product_service.ui_analytics import UIAnalytics
+from data_product_service.helper import do_write_to_aligned_header, clear_date_warning
 
 
-logger = logging.getLogger("databricks-streamlit-demo")
+logger = logging.getLogger("data_product_service")
 data_provider = TaxiSQLEndpointRepository(logger)
 plotter = UIAnalytics(data_provider)
 
