@@ -19,7 +19,7 @@ class SQLEndpointInfo:
 
 class SQLEndpointRepository:
     """
-    Base class for to data product
+    Base class for the data product
     """
     def __init__(self, logger: Logger) -> None:
         self.logger = logger
