@@ -163,4 +163,8 @@ I feel at the end of my research journey, I can confidently says, **_"yes indeed
 principles of software applies to data. Such architecture styles by providing software excellence, aides in automation & 
 simplicity. I wonder which company can say NO. It's time we say goodbye to 90s analytics style and say hello to 2022 analytics style :-)
 
+Finally, using aforementioned architecture, it's possible to mix and match different analytics tools like shown below:
+
+![Arch](architecture/flexibility.png)
+
 PS: This example is adapted from DBX sample
