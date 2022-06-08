@@ -165,7 +165,7 @@ simplicity. I wonder which company can say NO. It's time we say goodbye to 90s a
 
 Finally, using aforementioned architecture, it's possible to mix and match different analytics tools like shown below:
 
-![Arch](architecture/end_end_architecture_1.png)
+![Arch](architecture/end_end_architecture_3.png)
 
 
 ## Linkedin blog
