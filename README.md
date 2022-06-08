@@ -167,6 +167,9 @@ Finally, using aforementioned architecture, it's possible to mix and match diffe
 
 ![Arch](architecture/end_end_architecture_5.png)
 
+Architecture the notion of SQL as service
+
+![Arch](architecture/flexibility.png)
 
 ## Linkedin blog
 
